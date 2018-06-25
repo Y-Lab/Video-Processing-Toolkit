@@ -22,6 +22,18 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Features
+
+### Watermark
+```
+python watermark.py
+```
+
+### Concatenate
+```
+python concatenate.py
+```
+
 ## File Structure
 ```
 ├── data/
