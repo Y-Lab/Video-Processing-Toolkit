@@ -22,6 +22,21 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## File Structure
+```
+├── data/
+│   ├── input/
+│   └── output/
+├── toolkit/
+│   └── __init__.py
+├── watermark.py
+├── concatenate.py
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
 [license]: https://github.com/Y-Lab/Video-Processing-Toolkit/blob/master/LICENSE "License"
 
 [macos]: https://www.apple.com/macos/ "macOS"
