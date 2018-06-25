@@ -17,7 +17,7 @@ On Unix, Linux, BSD, macOS, and Cygwin:
 ```sh
 git clone https://github.com/Y-Lab/Video-Processing-Toolkit.git
 cd Video-Processing-Toolkit
-virtualenv venv
+virtualenv -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
