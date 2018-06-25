@@ -38,7 +38,9 @@ python concatenate.py
 ```
 ├── data/
 │   ├── input/
+│   │   └── ...
 │   └── output/
+│       └── ...
 ├── toolkit/
 │   └── __init__.py
 ├── watermark.py
