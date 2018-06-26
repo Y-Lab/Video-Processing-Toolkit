@@ -26,12 +26,12 @@ pip install -r requirements.txt
 
 ### Watermark
 ```
-python watermark.py
+python batch_watermark.py
 ```
 
 ### Concatenate
 ```
-python concatenate.py
+python batch_concatenate.py
 ```
 
 ## File Structure
@@ -43,8 +43,8 @@ python concatenate.py
 │       └── ...
 ├── toolkit/
 │   └── __init__.py
-├── watermark.py
-├── concatenate.py
+├── batch_watermark.py
+├── batch_concatenate.py
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
