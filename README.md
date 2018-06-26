@@ -10,6 +10,10 @@ Y-English Video Processing Toolkit
 - [Python 2.7/3.5+][python]
 - [Pip][pip]
 - [Virtualenv][virtualenv]
+- [FFmpeg][ffmpeg]
+
+### Install FFmpeg
+Please refer to [FFmpeg][ffmpeg] official website.
 
 ### Installing with Virtualenv
 On Unix, Linux, BSD, macOS, and Cygwin:
@@ -57,3 +61,4 @@ python batch_concatenate.py
 [python]: https://docs.python.org/ "Python"
 [pip]: https://pypi.python.org/pypi/pip "Pip"
 [virtualenv]: https://virtualenv.pypa.io/en/stable/ "Virtualenv"
+[ffmpeg]: https://ffmpeg.org/ "FFmpeg"

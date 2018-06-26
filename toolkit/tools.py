@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 
-import ffmpeg
+import subprocess
 
 
 def watermark(input_file, watermark_file, output_file):
-    watermark_file = ffmpeg.input(watermark_file)
-    return (ffmpeg
-        .input(input_file)
-        .overlay(watermark_file, x=10, y=10)
-        .output(output_file)
-        .run()
-    )
+    subprocess.run([
+        'ffmpeg',
+        '-i',
+        input_file,
+        '-i',
+        watermark_file,
+        '-filter_complex',
+        'overlay=main_w-overlay_w-10:10',
+        output_file,
+    ])
