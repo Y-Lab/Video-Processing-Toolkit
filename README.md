@@ -7,12 +7,12 @@ Y-English Video Processing Toolkit
 ## Installation
 ### Requirements
 - [macOS][macos] (Recommended)
-- [Python 2.7/3.5+][python]
+- [FFmpeg][ffmpeg]
+- [Python 3.6+][python]
 - [Pip][pip]
 - [Virtualenv][virtualenv]
-- [FFmpeg][ffmpeg]
 
-### Install FFmpeg
+### Get FFmpeg
 Please refer to [FFmpeg][ffmpeg] official website.
 
 ### Installing with Virtualenv
@@ -29,12 +29,12 @@ pip install -r requirements.txt
 ## Features
 
 ### Watermark
-```
+```sh
 python batch_watermark.py
 ```
 
 ### Concatenate
-```
+```sh
 python batch_concatenate.py
 ```
 
