@@ -19,6 +19,7 @@ def batch_watermark():
                 if not exist(pathname=output_file, overwrite=True):
                     make_dirs_for_file(pathname=output_file)
                 watermark(input_file=input_file, watermark_file=watermark_file, output_file=output_file)
+                print('----')
 
 
 if __name__ == '__main__':
