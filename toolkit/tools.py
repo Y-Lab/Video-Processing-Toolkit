@@ -6,12 +6,20 @@ import subprocess
 def watermark(input_file, watermark_file, output_file):
     subprocess.run([
         'ffmpeg',
+        '-r',
+        '30',
         '-i',
         input_file,
         '-i',
         watermark_file,
         '-filter_complex',
         'overlay=main_w-overlay_w-10:10',
+        '-r',
+        '30',
+        '-async',
+        '1',
+        '-vsync',
+        '1',
         output_file,
     ])
 

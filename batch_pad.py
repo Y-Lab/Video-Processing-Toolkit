@@ -12,7 +12,7 @@ def batch_pad():
             filename, file_ext = os.path.splitext(filename_with_ext)
             if file_ext in ['.mp4', '.MP4']:
                 input_file = os.path.join(root, filename_with_ext)
-                output_file = os.path.join(root.replace('/input/', '/output/pad/'), '{}{}'.format(filename, file_ext.lower()))
+                output_file = os.path.join(root.replace('INPUT_DATA_DIR', '{}/pad'.format(OUTPUT_DATA_DIR)), '{}{}'.format(filename, file_ext.lower()))
                 print('Watermarking: {} -> {}'.format(input_file, output_file))
                 if not exist(pathname=output_file, overwrite=True):
                     make_dirs_for_file(pathname=output_file)
