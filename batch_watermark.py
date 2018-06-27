@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import os
-from toolkit import INPUT_DATA_DIR, OUTPUT_DATA_DIR
+from toolkit import DATA_DIR, INPUT_DATA_DIR, OUTPUT_DATA_DIR
 from toolkit.utils import make_dirs_for_file, exist
 from toolkit.tools import watermark
 
 
 def batch_watermark():
-    watermark_file = os.path.join(INPUT_DATA_DIR, 'watermark.png')
+    watermark_file = os.path.join(DATA_DIR, 'watermark.png')
 
     for root, dirs, files in os.walk(INPUT_DATA_DIR):
         for filename_with_ext in files:
