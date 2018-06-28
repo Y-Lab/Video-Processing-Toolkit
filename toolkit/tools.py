@@ -49,6 +49,8 @@ def pad(input_file, output_file):
 def add_opening(input_file, opening_file, output_file):
     subprocess.run([
         'ffmpeg',
+        '-r',
+        '30',
         '-i',
         input_file,
         '-i',
@@ -65,6 +67,12 @@ def add_opening(input_file, opening_file, output_file):
         '[v]',
         '-map',
         '[a]',
+        '-r',
+        '30',
+        '-async',
+        '1',
+        '-vsync',
+        '1',
         output_file,
     ])
 
@@ -72,6 +80,8 @@ def add_opening(input_file, opening_file, output_file):
 def concat_and_add_opening(input_files, opening_file, output_file):
     cmd = ['ffmpeg']
     for input_file in input_files:
+        cmd.append('-r')
+        cmd.append('30')
         cmd.append('-i')
         cmd.append(input_file)
     cmd += [
@@ -89,6 +99,12 @@ def concat_and_add_opening(input_files, opening_file, output_file):
         '[v]',
         '-map',
         '[a]',
+        '-r',
+        '30',
+        '-async',
+        '1',
+        '-vsync',
+        '1',
         output_file,
     ]
     subprocess.run(cmd)
