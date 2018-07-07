@@ -13,7 +13,7 @@ def watermark(input_file, watermark_file, output_file):
         '-i',
         watermark_file,
         '-filter_complex',
-        'overlay=main_w-overlay_w-10:10',
+        'overlay=main_w-overlay_w-{}:{}'.format(10, 10+72),
         '-r',
         '30',
         '-async',
