@@ -108,3 +108,28 @@ def concat_and_add_opening(input_files, opening_file, output_file):
         output_file,
     ]
     subprocess.run(cmd)
+
+
+def concatentate(input_files, output_file):
+    cmd = ['ffmpeg']
+    for input_file in input_files:
+        cmd.append('-r')
+        cmd.append('30')
+        cmd.append('-i')
+        cmd.append(input_file)
+    cmd += [
+        '-filter_complex',
+        '{} concat=n={}:v=1:a=1 [v][a]'.format(''.join(['[{}:v:0][{}:a:0]'.format(i, i) for i in range(len(input_files))]), len(input_files)),
+        '-map',
+        '[v]',
+        '-map',
+        '[a]',
+        '-r',
+        '30',
+        '-async',
+        '1',
+        '-vsync',
+        '1',
+        output_file,
+    ]
+    subprocess.run(cmd)

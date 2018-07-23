@@ -17,7 +17,6 @@ def batch_concatenate_and_add_major_opening():
         for filename_with_ext in files:
             filename, file_ext = os.path.splitext(filename_with_ext)
             if file_ext in ['.mp4', '.MP4']:
-                # input_file = os.path.join(root, filename_with_ext)
                 input_files.append(filename_with_ext)
         if len(input_files):
             input_files.sort(key=lambda x: int(x.split('-')[-1].replace('.mp4', '').replace('.MP4', '')))

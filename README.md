@@ -33,6 +33,26 @@ pip install -r requirements.txt
 python batch_watermark.py
 ```
 
+### Scale
+```sh
+python batch_scale.py
+```
+
+### Pad
+```sh
+python batch_pad.py
+```
+
+### Add Minor Opening
+```sh
+python batch_add_minor_opening.py
+```
+
+### Concatenate and Add Major Opening
+```sh
+python batch_concatenate_and_add_major_opening.py
+```
+
 ### Concatenate
 ```sh
 python batch_concatenate.py
@@ -48,6 +68,10 @@ python batch_concatenate.py
 ├── toolkit/
 │   └── __init__.py
 ├── batch_watermark.py
+├── batch_scale.py
+├── batch_pad.py
+├── batch_add_minor_opening.py
+├── batch_concatenate_and_add_major_opening.py
 ├── batch_concatenate.py
 ├── requirements.txt
 ├── README.md
