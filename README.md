@@ -1,4 +1,4 @@
-[![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg)][python]
+[![Python](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue.svg)][python]
 [![License](https://img.shields.io/github/license/Y-Lab/Video-Processing-Toolkit.svg)][license]
 
 # Video Processing Toolkit
@@ -8,7 +8,7 @@ Y-English Video Processing Toolkit
 ### Requirements
 - [macOS][macos] (Recommended)
 - [FFmpeg][ffmpeg]
-- [Python 3.6+][python]
+- [Python 3.6 | 3.7 | 3.8][python]
 - [Pip][pip]
 - [Virtualenv][virtualenv]
 

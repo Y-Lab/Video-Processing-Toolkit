@@ -13,7 +13,7 @@ def watermark(input_file, watermark_file, output_file):
         '-i',
         watermark_file,
         '-filter_complex',
-        'overlay=main_w-overlay_w-{}:{}'.format(10, 10+72),
+        f'overlay=main_w-overlay_w-{10}:{10+72}',
         '-r',
         '30',
         '-async',
@@ -94,7 +94,7 @@ def concat_and_add_opening(input_files, opening_file, output_file):
         '-i',
         'anullsrc',
         '-filter_complex',
-        '[{}:v:0][{}:a]{} concat=n={}:v=1:a=1 [v][a]'.format(len(input_files), len(input_files)+1, ''.join(['[{}:v:0][{}:a:0]'.format(i, i) for i in range(len(input_files))]), len(input_files)+1),
+        f"[{len(input_files)}:v:0][{len(input_files)+1}:a]{''.join([f'[{i}:v:0][{i}:a:0]' for i in range(len(input_files))])} concat=n={len(input_files)+1}:v=1:a=1 [v][a]",
         '-map',
         '[v]',
         '-map',
@@ -119,7 +119,7 @@ def concatentate(input_files, output_file):
         cmd.append(input_file)
     cmd += [
         '-filter_complex',
-        '{} concat=n={}:v=1:a=1 [v][a]'.format(''.join(['[{}:v:0][{}:a:0]'.format(i, i) for i in range(len(input_files))]), len(input_files)),
+        f"{''.join([f'[{i}:v:0][{i}:a:0]' for i in range(len(input_files))])} concat=n={len(input_files)}:v=1:a=1 [v][a]",
         '-map',
         '[v]',
         '-map',

@@ -25,14 +25,14 @@ def exist(pathname, overwrite=False, display_info=True):
     if os.path.exists(pathname):
         if overwrite:
             if display_info:
-                print('%s: %s exists. Overwrite.' % (__path_type(pathname), pathname))
+                print(f'{__path_type(pathname)}: {pathname} exists. Overwrite.')
             os.remove(pathname)
             return False
         else:
             if display_info:
-                print('%s: %s exists.' % (__path_type(pathname), pathname))
+                print(f'{__path_type(pathname)}: {pathname} exists.')
             return True
     else:
         if display_info:
-            print('%s: %s does not exist.' % (__path_type(pathname), pathname))
+            print(f'{__path_type(pathname)}: {pathname} does not exist.')
         return False
